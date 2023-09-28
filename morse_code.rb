@@ -22,3 +22,13 @@ def decode_word(str)
   end 
   word
 end
+
+def decode(str)
+  split_arr = str.split('   ')
+  sentence = ''
+  split_arr.each_with_index do |word, index|
+    sentence += decode_word(word)
+    sentence += ' ' if index < split_arr.length-1
+  end 
+  sentence
+end
