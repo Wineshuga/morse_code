@@ -12,3 +12,13 @@ def decode_char(str)
 morse_letters.select {|key, value| value == str}.keys[0]
 
 end
+
+
+def decode_word(str)
+  split_arr = str.split
+  word = ''
+  split_arr.each do |char|
+    word += decode_char(char)
+  end 
+  word
+end
